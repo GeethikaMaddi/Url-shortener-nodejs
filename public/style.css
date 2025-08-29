@@ -1,21 +1,74 @@
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #222;
-  background-color: #fff;
+  background-color:#ac4ab5 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+label {
+  color:rgba(128, 42, 126, 0.788);
+  display: block;       /* Make label appear above the input */
+  margin-bottom: 8px;   /* Add space below the label */
+  font-weight: bold;    /* Optional: make label text bold */
+}
+.card {
+  background:  #dd93e7bc;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 400px;
   text-align: center;
-  line-height: 1.4em;
 }
 
-main {
-  padding: 0;
-  margin-top: 40px;
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-h3 {
-  margin-top: 30px;
+input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
+button {
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  word-wrap: break-word;
+}
+
+.result a {
+  color: #1b4776;
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+}
 
 
 .user-stories li {
