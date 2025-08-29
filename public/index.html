@@ -24,10 +24,10 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const url = form.url.value;
-
+//http://localhost:3000/api/shorturl
       try {
         // Point directly to backend server
-        const res = await fetch('http://localhost:3000/api/shorturl', {
+        const res = await fetch('https://url-shortener-ia0f.onrender.com/api/shorturl', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ url })
@@ -38,8 +38,8 @@
           resultDiv.textContent = data.error;
         } else {
           resultDiv.innerHTML = `Shortened URL: 
-          <a href="http://localhost:3000/api/shorturl/${data.short_url}" target="_blank">
-          http://localhost:3000/api/shorturl/${data.short_url}
+          <a href="https://url-shortener-ia0f.onrender.com/api/shorturl/${data.short_url}" target="_blank">
+          https://url-shortener-ia0f.onrender.com/api/shorturl/${data.short_url}
           </a>
           <pre>${JSON.stringify(data, null, 2)}</pre>`;
         }
