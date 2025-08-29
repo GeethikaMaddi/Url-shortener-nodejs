@@ -37,7 +37,11 @@
         if (data.error) {
           resultDiv.textContent = data.error;
         } else {
-          resultDiv.innerHTML = `Shortened URL: <a href="http://localhost:3000/api/shorturl/${data.short_url}" target="_blank">http://localhost:3000/api/shorturl/${data.short_url}</a>`;
+          resultDiv.innerHTML = `Shortened URL: 
+          <a href="http://localhost:3000/api/shorturl/${data.short_url}" target="_blank">
+          http://localhost:3000/api/shorturl/${data.short_url}
+          </a>
+          <pre>${JSON.stringify(data, null, 2)}</pre>`;
         }
       } catch (err) {
         resultDiv.textContent = 'Something went wrong!';
